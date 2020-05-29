@@ -4,8 +4,10 @@
 	5/26/20 - Sometimes users are shown 'here' but don't have AP data. Show them 'away'
 */
 define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__.'/whoshere/config.php');
-require_once('client.php');  # Change to location of UniFi API
+require_once(__ROOT__ . '/vendor/autoload.php');
+require_once(__ROOT__ . '/src/config.php');
+
+use UniFi_API\Client;
 
 echo "<html>
 <meta http-equiv=\"refresh\" content=\"120\"/>
